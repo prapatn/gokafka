@@ -1,0 +1,13 @@
+ docker ps
+ 
+ docker exec -it <id,name> bash
+ 
+ kafka-topics --bootstrap-server localhost:9092 --list
+
+ kafka-topics --bootstrap-server localhost:9092 --topic=king --create
+
+ kafka-console-producer
+    kafka-console-producer --bootstrap-server localhost:9092 --topic=king 
+ kafka-console-consumer  
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic=king | --from-beginning | --group=<name>
+                                                             --include="<name>|<name>"                          2 topic
