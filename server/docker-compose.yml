@@ -27,3 +27,16 @@ services:
       # KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       # KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
       # KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+  
+  mysql:
+    image: mariadb
+    container_name: mysql
+    environment:       
+      - MARIADB_ROOT_PASSWORD=P@ssw0rd
+      - MARIADB_DATABASE=test
+      - MARIADB_USER=king
+      - MARIADB_PASSWORD=P@ssw0rd
+    ports: 
+      - 3306:3306
+    volumes: 
+      - ./mysql:/var/lib/mysql

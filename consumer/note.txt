@@ -1,1 +1,10 @@
 kafka-topics --bootstrap-server localhost:9092 --topic=king --describe
+
+kafka-consumer-groups --bootstrap-server localhost:9092 --list
+
+CloseAccountEvent
+DepositFundEvent
+OpenAccountEvent
+WithDrawFundEvent
+
+kafka-console-consumer --bootstrap-server localhost:9092 --group log --from-beginning --whitelist '.*Event'
